@@ -1493,8 +1493,8 @@ HEADER STYLES
   margin: 0.25em 0;
   background: url("/wordpress/wp-content/themes/brafton2016/library/images/full_logo.png");
   background-size: contain;
-  width: 230px;
-  height: 50px;
+  width: 270px;
+  height: 65px;
   float: left; }
   #logo span {
     display: none; }
@@ -1533,6 +1533,7 @@ and more scalable.
       padding: 0.75em 1.15em;
       text-transform: uppercase;
       font-size: 0.8em;
+      font-weight: 300;
       /*
 			remember this is for mobile ONLY, so there's no need
 			to even declare hover styles here, you can do it in
@@ -1542,6 +1543,8 @@ and more scalable.
     .nav li:last-child {
       background: #8CC040;
       margin-left: 10px; }
+      .nav li:last-child a {
+        font-weight: 600; }
       .nav li:last-child:hover {
         background: #7ead39; }
     .nav li ul.sub-menu li a,
@@ -1909,6 +1912,8 @@ FORMS STYLES
     font-weight: 300;
     border: 0px;
     width: auto; }
+    #demo form .buttonSubmit input:hover {
+      background: #739e34; }
 
 /*********************
 FOOTER STYLES

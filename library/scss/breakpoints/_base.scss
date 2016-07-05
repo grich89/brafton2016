@@ -275,8 +275,8 @@ HEADER STYLES
 		margin: 0.25em 0;
 		background: url('/wordpress/wp-content/themes/brafton2016/library/images/full_logo.png');
 		background-size: contain;
-		width: 230px;
-		height: 50px;
+		width: 270px;
+    	height: 65px;
 		float: left;
 
 		span {
@@ -314,6 +314,7 @@ and more scalable.
 			padding: 0.75em 1.15em;
 			text-transform: uppercase;
 			font-size: 0.8em;
+			font-weight: 300;
 
 			/*
 			remember this is for mobile ONLY, so there's no need
@@ -331,6 +332,9 @@ and more scalable.
 		&:last-child {
 			background: $green;
 			margin-left: 10px;
+			a {
+				font-weight: 600;
+			}
 			&:hover {
 				background: darken($green, 5%);
 			}
@@ -1019,7 +1023,7 @@ FORMS STYLES
 		}
 		.buttonSubmit {
 			input {
-				background: #8CC040;
+				background: $green;
 			    color: #fff;
 			    display: table;
 			    margin: 0 auto;
@@ -1030,6 +1034,9 @@ FORMS STYLES
 			    font-weight: 300;
 			    border: 0px;
 			    width: auto;
+			    &:hover {
+			    	background: darken($green, 9%);
+			    }
 			}
 		}
 	}
