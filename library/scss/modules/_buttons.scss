@@ -91,3 +91,21 @@ and it will create a button dependant on those variables.
   } // end active
 
 } // end blue button
+
+.black-btn {
+  @extend %btn; // here we load the btn defaults
+  border-color: $black;
+  color: $black;
+  &:visited {
+    color: $black;
+  }
+  &:hover,
+  &:focus {
+    background-color: $black;
+  } // end hover
+
+  &:active {
+    background-color: $black;
+  } // end active
+
+} // end blue button

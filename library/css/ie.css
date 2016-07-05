@@ -427,6 +427,10 @@ be seen on the Desktop.
 .wrap {
   width: 1040px; }
 
+.header .wrap {
+  max-width: 1200px;
+  width: 100%; }
+
 /*
 you can call the larger styles if you want, but there's really no need
 */

@@ -919,7 +919,7 @@ Here's a quick video to show how it works:
 http://www.youtube.com/watch?v=hwdVpKiJzac
 
 *********************/
-.blue-btn, .comment-reply-link, #submit, .green-btn {
+.blue-btn, .comment-reply-link, #submit, .green-btn, .black-btn {
   display: inline-block;
   position: relative;
   font-family: "Proxima Nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -935,11 +935,11 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
   cursor: pointer;
   -webkit-transition: background-color 0.14s ease-in-out;
   transition: background-color 0.14s ease-in-out; }
-  .blue-btn:hover, .comment-reply-link:hover, #submit:hover, .green-btn:hover, .blue-btn:focus, .comment-reply-link:focus, #submit:focus, .green-btn:focus {
+  .blue-btn:hover, .comment-reply-link:hover, #submit:hover, .green-btn:hover, .black-btn:hover, .blue-btn:focus, .comment-reply-link:focus, #submit:focus, .green-btn:focus, .black-btn:focus {
     color: #fff;
     text-decoration: none;
     outline: none; }
-  .blue-btn:active, .comment-reply-link:active, #submit:active, .green-btn:active {
+  .blue-btn:active, .comment-reply-link:active, #submit:active, .green-btn:active, .black-btn:active {
     top: 1px; }
 
 /*
@@ -963,6 +963,16 @@ and it will create a button dependant on those variables.
     background-color: #8CC040; }
   .green-btn:active {
     background-color: #8CC040; }
+
+.black-btn {
+  border-color: #000;
+  color: #000; }
+  .black-btn:visited {
+    color: #000; }
+  .black-btn:hover, .black-btn:focus {
+    background-color: #000; }
+  .black-btn:active {
+    background-color: #000; }
 
 /******************************************************************
 Site Name:
@@ -1241,8 +1251,9 @@ input[type="password"] {
 
 textarea {
   max-width: 100%;
-  min-height: 120px;
-  line-height: 1.5em; }
+  min-height: 250px;
+  line-height: 1.5em;
+  padding: 12px; }
 
 select {
   -webkit-appearance: none;
@@ -1279,7 +1290,7 @@ body {
   font-size: 100%;
   line-height: 1.5;
   color: #333;
-  background-color: #eaedf2;
+  background-color: #fff;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
@@ -1291,6 +1302,56 @@ WORDPRESS BODY CLASSES
 style a page via class
 ********************/
 /* for sites that are read right to left (i.e. hebrew) */
+.home #intro {
+  padding: 60px 0px; }
+  .home #intro h2 {
+    text-align: center; }
+  .home #intro p {
+    text-align: center;
+    line-height: 170%; }
+  .home #intro .black-btn {
+    display: table;
+    margin: 50px auto 0 auto; }
+
+.home #writers {
+  background: #000;
+  padding: 60px 0px; }
+  .home #writers h2 {
+    color: #fff; }
+  .home #writers p {
+    color: #fff;
+    width: 50%; }
+  .home #writers .green-btn {
+    margin-top: 1em;
+    margin-left: 2em; }
+
+.home #how {
+  padding: 60px 0px;
+  overflow: auto;
+  text-align: center; }
+  .home #how .d-all:first-of-type {
+    border-bottom: 3px solid #9fa6b4;
+    padding-bottom: 30px;
+    margin-bottom: 30px; }
+    .home #how .d-all:first-of-type .grid-col {
+      padding: 0em 1em; }
+  .home #how .d-all:nth-of-type(2) {
+    margin-bottom: 30px; }
+    .home #how .d-all:nth-of-type(2) .grid-col {
+      text-align: left; }
+      .home #how .d-all:nth-of-type(2) .grid-col img {
+        float: left;
+        margin-right: 1em;
+        max-width: 110px; }
+      .home #how .d-all:nth-of-type(2) .grid-col p, .home #how .d-all:nth-of-type(2) .grid-col span {
+        margin-top: 0;
+        font-size: 1em;
+        line-height: 120%; }
+      .home #how .d-all:nth-of-type(2) .grid-col span {
+        display: block; }
+      .home #how .d-all:nth-of-type(2) .grid-col span.author {
+        font-weight: 600; }
+
 /* home page */
 /* blog template page */
 /* archive page */
@@ -1336,12 +1397,16 @@ LAYOUT & GRID STYLES
 LINK STYLES
 *********************/
 a, a:visited {
-  color: #000;
+  color: #2566b1;
+  font-size: 20px;
+  text-decoration: none;
+  font-weight: 600;
   /* on hover */
   /* on click */
   /* mobile tap color */ }
   a:hover, a:focus, a:visited:hover, a:visited:focus {
-    color: black; }
+    color: #1d508b;
+    text-decoration: underline; }
   a:link, a:visited:link {
     /*
 		this highlights links on iPhones/iPads.
@@ -1364,17 +1429,28 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
   h1 a, .h1 a, h2 a, .h2 a, h3 a, .h3 a, h4 a, .h4 a, h5 a, .h5 a {
     text-decoration: none; }
 
-h1, .h1 {
-  font-size: 2.5em;
-  line-height: 1.333em; }
+h1 {
+  color: #404040;
+  font-weight: 500;
+  font-size: 45px;
+  line-height: 120%; }
 
-h2, .h2 {
-  font-size: 1.75em;
-  line-height: 1.4em;
-  margin-bottom: 0.375em; }
+h2 {
+  color: #404040;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 120%; }
 
-h3, .h3 {
-  font-size: 1.125em; }
+h3 {
+  color: #404040;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 120%; }
+
+p, ul, ol {
+  color: #000;
+  font-size: 20px;
+  line-height: 170%; }
 
 h4, .h4 {
   font-size: 1.1em;
@@ -1392,7 +1468,6 @@ HEADER STYLES
 .header {
   background-color: #000; }
   .header .expand {
-    color: #fff;
     height: 50vh;
     display: table;
     width: 100%;
@@ -1403,11 +1478,13 @@ HEADER STYLES
       padding-left: 5em; }
       .header .expand .inner .text h2 {
         font-weight: 600;
-        font-size: 2.5em; }
+        font-size: 2.5em;
+        color: #fff; }
       .header .expand .inner .text p {
         line-height: 180%;
         font-size: 1.1em;
-        width: 500px; }
+        width: 500px;
+        color: #fff; }
       .header .expand .inner .text a.green-btn {
         margin-top: 1em;
         margin-left: 2em; }
@@ -1455,7 +1532,7 @@ and more scalable.
       text-decoration: none;
       padding: 0.75em 1.15em;
       text-transform: uppercase;
-      font-size: 0.95em;
+      font-size: 0.8em;
       /*
 			remember this is for mobile ONLY, so there's no need
 			to even declare hover styles here, you can do it in
@@ -1799,6 +1876,41 @@ SIDEBARS & ASIDES
   margin-bottom: 1.5em; }
 
 /*********************
+FORMS STYLES
+*********************/
+#demo {
+  background: #000;
+  padding: 60px 0px;
+  color: #fff;
+  overflow: auto; }
+  #demo h2, #demo p {
+    color: #fff;
+    text-align: center; }
+  #demo .left-col, #demo .right-col {
+    width: 50%;
+    float: left;
+    padding: 0px 30px; }
+  #demo form input {
+    width: 100%;
+    max-width: 100%; }
+  #demo form label {
+    margin-left: 10px;
+    font-style: italic;
+    font-size: 0.9em; }
+  #demo form .buttonSubmit input {
+    background: #8CC040;
+    color: #fff;
+    display: table;
+    margin: 0 auto;
+    border-radius: 10px;
+    padding: 10px 60px;
+    font-size: 1.4em;
+    text-transform: uppercase;
+    font-weight: 300;
+    border: 0px;
+    width: auto; }
+
+/*********************
 FOOTER STYLES
 *********************/
 .footer {
@@ -2048,7 +2160,10 @@ be seen on the Desktop.
 
 ******************************************************************/
   .wrap {
-    width: 1040px; } }
+    width: 1040px; }
+  .header .wrap {
+    max-width: 1200px;
+    width: 100%; } }
 
 /*********************
 LARGE VIEWING SIZE

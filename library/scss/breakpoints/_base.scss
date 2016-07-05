@@ -20,7 +20,7 @@ body {
 	font-size: 100%;
 	line-height: 1.5;
 	color: $text-color;
-	background-color: $gray;
+	background-color: #fff;
   	-webkit-font-smoothing: antialiased;
   	-moz-osx-font-smoothing: grayscale;
 }
@@ -35,7 +35,74 @@ style a page via class
 ********************/
 
 .rtl {}                           /* for sites that are read right to left (i.e. hebrew) */
-.home {}                          /* home page */
+.home {
+	#intro {
+		padding: 60px 0px;
+		h2 {
+			text-align: center;
+		}
+		p {
+			text-align: center;
+			line-height: 170%;
+		}
+		.black-btn {
+			display: table;
+			margin: 50px auto 0 auto;
+		}
+	}
+	#writers {
+		background: $black;
+		padding: 60px 0px;
+		h2 {
+			color: #fff;
+		}
+		p {
+			color: #fff;
+			width: 50%;
+		}
+		.green-btn {
+			margin-top: 1em;
+			margin-left: 2em;
+		}
+	}
+	#how {
+		padding: 60px 0px;
+		overflow: auto;
+		text-align: center;
+		.d-all{
+			&:first-of-type {
+				border-bottom: 3px solid $meta-gray;
+				padding-bottom: 30px;
+				margin-bottom: 30px;
+				.grid-col {
+					padding: 0em 1em;
+				}
+			}
+			&:nth-of-type(2) {
+				margin-bottom: 30px;
+				.grid-col {
+					text-align: left;
+					img {
+						float: left;
+						margin-right: 1em;
+						max-width: 110px;
+					}
+					p, span {
+						margin-top: 0;
+						font-size: 1em;
+						line-height: 120%;
+					}
+					span {
+						display: block;
+					}
+					span.author {
+						font-weight: 600;
+					}
+				}
+			}
+		}
+	}
+}                          /* home page */
 .blog {}                          /* blog template page */
 .archive {}                       /* archive page */
 .date {}                          /* date archive page */
@@ -85,10 +152,14 @@ LINK STYLES
 
 a, a:visited {
 	color: $link-color;
+	font-size: 20px;
+	text-decoration: none;
+	font-weight: 600;
 
 	/* on hover */
 	&:hover, &:focus {
 		color: $link-hover;
+		text-decoration: underline;
 	}
 
 	/* on click */
@@ -125,19 +196,31 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
 	}
 }
 
-h1, .h1 {
-	font-size: 2.5em;
-	line-height: 1.333em;
+h1 {
+	color: $headings;
+	font-weight: 500;
+	font-size: 45px;
+	line-height: 120%;
 }
 
-h2, .h2 {
-	font-size: 1.75em;
-	line-height: 1.4em;
-	margin-bottom: 0.375em;
+h2 {
+	color: $headings;
+	font-weight: 500;
+	font-size: 40px;
+	line-height: 120%;
 }
 
-h3, .h3 {
-	font-size: 1.125em;
+h3 {
+	color: $headings;
+	font-weight: 500;
+	font-size: 30px;
+	line-height: 120%;
+}
+
+p, ul, ol {
+	color: $black;
+	font-size: 20px;
+	line-height: 170%;
 }
 
 h4, .h4 {
@@ -159,7 +242,6 @@ HEADER STYLES
 .header {
 	background-color: $black;
 	.expand {
-		color: #fff;
 		height: 50vh;
 		display: table;
 		width: 100%;
@@ -172,11 +254,13 @@ HEADER STYLES
 				h2 {
 					font-weight: 600;
 					font-size: 2.5em;
+					color: #fff;
 				}
 				p {
 					line-height: 180%;
 					font-size: 1.1em;
 					width: 500px;
+					color: #fff;
 				}
 				a.green-btn {
 					margin-top: 1em;
@@ -229,7 +313,7 @@ and more scalable.
 			text-decoration: none;
 			padding: 0.75em 1.15em;
 			text-transform: uppercase;
-			font-size: 0.95em;
+			font-size: 0.8em;
 
 			/*
 			remember this is for mobile ONLY, so there's no need
@@ -904,6 +988,52 @@ SIDEBARS & ASIDES
 		border-radius: 2px;
 		margin-bottom: 1.5em;
 	}
+
+/*********************
+FORMS STYLES
+*********************/
+
+#demo {
+	background: $black;
+	padding: 60px 0px;
+	color: #fff;
+	overflow: auto;
+	h2, p {
+		color: #fff;
+		text-align: center;
+	}
+	.left-col, .right-col {
+		width: 50%;
+		float: left;
+		padding: 0px 30px;
+	}
+	form {
+		input {
+			width: 100%;
+			max-width: 100%;
+		}
+		label {
+			margin-left: 10px;
+			font-style: italic;
+			font-size: 0.9em;
+		}
+		.buttonSubmit {
+			input {
+				background: #8CC040;
+			    color: #fff;
+			    display: table;
+			    margin: 0 auto;
+			    border-radius: 10px;
+			    padding: 10px 60px;
+			    font-size: 1.4em;
+			    text-transform: uppercase;
+			    font-weight: 300;
+			    border: 0px;
+			    width: auto;
+			}
+		}
+	}
+}
 
 /*********************
 FOOTER STYLES

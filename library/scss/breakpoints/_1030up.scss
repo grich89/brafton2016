@@ -12,3 +12,10 @@ be seen on the Desktop.
 .wrap {
   width: 1040px;
 }
+
+.header {
+	.wrap {
+		max-width: 1200px;
+		width: 100%;
+	}
+}
