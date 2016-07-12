@@ -38,6 +38,8 @@
 		<?php // drop Google Analytics Here ?>
 		<?php // end analytics ?>
 
+		<script src="https://use.fontawesome.com/548d31e453.js"></script>
+
 	</head>
 
 	<body <?php body_class(); ?> itemscope itemtype="http://schema.org/WebPage">
@@ -46,42 +48,65 @@
 
 			<header class="header" role="banner" itemscope itemtype="http://schema.org/WPHeader">
 
-				<div id="inner-header" class="wrap cf">
+				<div class="overlay">
 
-					<?php // to use a image just replace the bloginfo('name') with your img src and remove the surrounding <p> ?>
-					<a href="<?php echo home_url(); ?>" rel="nofollow"><p id="logo" class="h1" itemscope itemtype="http://schema.org/Organization"><span><?php bloginfo('name'); ?></span></p></a>
+					<div id="inner-header" class="wrap cf">
 
-					<?php // if you'd like to use the site description you can un-comment it below ?>
-					<?php // bloginfo('description'); ?>
+						<?php // to use a image just replace the bloginfo('name') with your img src and remove the surrounding <p> ?>
+						<a href="<?php echo home_url(); ?>" rel="nofollow"><p id="logo" class="h1" itemscope itemtype="http://schema.org/Organization"><span><?php bloginfo('name'); ?></span></p></a>
+
+						<?php // if you'd like to use the site description you can un-comment it below ?>
+						<?php // bloginfo('description'); ?>
 
 
-					<nav role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
-						<?php wp_nav_menu(array(
-    					         'container' => false,                           // remove nav container
-    					         'container_class' => 'menu cf',                 // class of container (should you choose to use it)
-    					         'menu' => __( 'The Main Menu', 'bonestheme' ),  // nav name
-    					         'menu_class' => 'nav top-nav cf',               // adding custom nav class
-    					         'theme_location' => 'main-nav',                 // where it's located in the theme
-    					         'before' => '',                                 // before the menu
-        			               'after' => '',                                  // after the menu
-        			               'link_before' => '',                            // before each link
-        			               'link_after' => '',                             // after each link
-        			               'depth' => 0,                                   // limit the depth of the nav
-    					         'fallback_cb' => ''                             // fallback function (if there is one)
-						)); ?>
+						<nav role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+							<?php wp_nav_menu(array(
+	    					         'container' => false,                           // remove nav container
+	    					         'container_class' => 'menu cf',                 // class of container (should you choose to use it)
+	    					         'menu' => __( 'The Main Menu', 'bonestheme' ),  // nav name
+	    					         'menu_class' => 'nav top-nav cf',               // adding custom nav class
+	    					         'theme_location' => 'main-nav',                 // where it's located in the theme
+	    					         'before' => '',                                 // before the menu
+	        			               'after' => '',                                  // after the menu
+	        			               'link_before' => '',                            // before each link
+	        			               'link_after' => '',                             // after each link
+	        			               'depth' => 0,                                   // limit the depth of the nav
+	    					         'fallback_cb' => ''                             // fallback function (if there is one)
+							)); ?>
 
-					</nav>
+						</nav>
 
-					<div class="clear"></div>
+						<div class="clear"></div>
 
-					<div class="expand">
-						<div class="inner">
-							<div class="text">
-								<h2>Expand your marketing presence</h2>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque posuere egestas odio, nec placerat augue congue eu. Suspendisse potenti.</p>
-								<a class="green-btn" href="#">Content Marketing</a>
+						<?php if (is_front_page()) { ?>
+
+							<div class="expand">
+								<div class="inner">
+									<div class="text">
+										<h2>Expand your marketing presence</h2>
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque posuere egestas odio, nec placerat augue congue eu. Suspendisse potenti.</p>
+										<a class="green-btn" href="#">Content Marketing</a>
+									</div>
+								</div>
 							</div>
-						</div>
+
+						<?php } ?>
+
+						<?php if (is_page('About')) { ?>
+
+							<div class="video">
+								<div class="inner">
+									<div class="text">
+										<div class="play">
+											<a href="#"><i class="fa fa-play-circle-o" aria-hidden="true"></i></a>
+										</div>
+										<h2>Lorem ipsum dolor sit amet</h2>
+									</div>
+								</div>
+							</div>
+
+						<?php } ?>
+
 					</div>
 
 				</div>

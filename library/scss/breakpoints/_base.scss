@@ -29,6 +29,113 @@ body {
 	clear: both;
 }
 
+/*********************
+REUSABLE PAGE STYLES
+*********************/
+
+#intro {
+	padding: 60px 0px;
+	h2 {
+		text-align: center;
+	}
+	p {
+		text-align: center;
+		line-height: 170%;
+	}
+	.black-btn {
+		display: table;
+		margin: 50px auto 0 auto;
+	}
+}
+
+.features {
+	.feature {
+		overflow: auto;
+		clear: both;
+		padding-bottom: 80px;
+		img {
+			max-width: 100%;
+		}
+		&:nth-of-type(odd) {
+			.d-1of2 {
+				&:first-of-type {
+					padding-right: 40px;
+				}
+				&:nth-of-type(2) {
+					padding-left: 0px;
+				}
+			}
+		}
+		&:nth-of-type(even) {
+			.d-1of2 {
+				&:nth-of-type(2) {
+					padding-left: 40px;
+				}
+				&:first-of-type {
+					padding-right: 0px;
+				}
+			}
+		}
+	}
+}
+
+.channels {
+	text-align: center;
+	background: $med-gray;
+	overflow: auto;
+	padding: 30px 0px 80px 0px;
+	.d-1of3 {
+		background: #fff;
+		padding: 0px 35px 25px 35px;
+		&:hover {
+			box-shadow: 0px 0px 30px rgba(0,0,0,0.1) inset;
+		}
+		h3 {
+			border-bottom: 2px solid $med-gray;
+			padding-bottom: 20px;
+			margin-bottom: 20px;
+			font-weight: 600;
+		}
+	}
+}
+
+.learn-more {
+	text-align: center;
+	padding: 60px 0px;
+	overflow: auto;
+	img {
+		max-width: 100%;
+	}
+	.d-1of3 {
+		padding: 0px 20px;
+	}
+}
+
+.connect {
+	text-align: center; 
+	padding: 30px 0px;
+	background: $med-gray;
+}
+
+.make {
+	text-align: center;
+	background: url('/wordpress/wp-content/themes/brafton2016/library/images/placeholder_image_fullWidth.jpg');
+	background-size: cover;
+	background-position: center center;
+	.overlay {
+		background: rgba(0,0,0,0.85);
+		padding: 30px 0px 60px 0px;
+		overflow: auto;
+	}
+	h2 {
+		color: #fff;
+		margin-bottom: 20px;
+	}
+	p {
+		color: #fff;
+	}
+}
+
 /********************
 WORDPRESS BODY CLASSES
 style a page via class
@@ -36,20 +143,6 @@ style a page via class
 
 .rtl {}                           /* for sites that are read right to left (i.e. hebrew) */
 .home {
-	#intro {
-		padding: 60px 0px;
-		h2 {
-			text-align: center;
-		}
-		p {
-			text-align: center;
-			line-height: 170%;
-		}
-		.black-btn {
-			display: table;
-			margin: 50px auto 0 auto;
-		}
-	}
 	#writers {
 		background: $black;
 		padding: 60px 0px;
@@ -136,7 +229,109 @@ style a page via class
 .logged-in {}                     /* if user is logged in */
 .paged {}                         /* paged items like search results or archives */
 	.paged-1 {}                     /* individual paged (i.e. body.paged-3) */
-
+.page-id-1000 {
+	.header {
+		background: url('/wordpress/wp-content/themes/brafton2016/library/images/placeholder_image_fullWidth.jpg');
+		background-size: cover;
+		background-position: center center;
+		.overlay {
+			background: rgba(0,0,0,0.8);
+			.video {
+				height: 50vh;
+				min-height: 400px;
+				display: table;
+				width: 100%;
+				.inner {
+					display: table-cell;
+					vertical-align: middle;
+					.text {
+						text-align: center;
+						.play {
+							i {
+								color: #fff;
+								font-size: 160px;
+								margin-bottom: 20px;
+								&:hover {
+									color: $blue;
+								}
+							}
+						}
+						h2 {
+							color: #fff;
+							margin: 0px;
+							font-size: 1.7em;
+						}
+					}
+				}
+			}
+		}
+	}
+	.qualities {
+		border-bottom: 3px solid $med-gray;
+		border-top: 3px solid $med-gray;
+		padding: 25px 0px;
+		text-align: center;
+		margin-bottom: 60px;
+		.d-1of3 {
+			padding: 0px 20px;
+			h3 {
+				font-size: 1.5em;
+			}
+		}
+	}
+	.aspirations {
+		.d-1of2 {
+			padding-right: 40px;
+			&:last-of-type {
+				padding-right: 0;
+				padding-left: 40px;
+			}
+		}
+		h2 {
+			text-align: center;
+		}
+		p {
+			margin-bottom: 40px;
+			strong {
+				font-weight: 600;
+			}
+		}
+	}
+	.locations {
+		text-align: center;
+		padding: 60px 0px;
+		.d-all, .m-all, .t-all {
+			padding: 60px 0px;
+		}
+		.contact-info {
+			max-width: 500px;
+			float: none;
+			margin: 0px auto 80px auto;
+			text-align: left;
+			overflow: auto;
+			padding: 0px;
+			.d-all {
+				padding: 0px;
+			}
+			a {
+				font-size: 18px;
+				font-weight: 400;
+				color: #333;
+			}
+		}
+	}
+	.make {
+		.d-1of2 {
+			padding-right: 40px;
+			border-right: 2px solid #fff;
+			&:last-of-type {
+				padding-left: 40px;
+				padding-right: 0px;
+				border-right: 0px;
+			}
+		}
+	}
+} /* About Us */
 /*********************
 LAYOUT & GRID STYLES
 *********************/
@@ -999,7 +1194,7 @@ FORMS STYLES
 
 #demo {
 	background: $black;
-	padding: 60px 0px;
+	padding: 20px 0px 70px 0px;
 	color: #fff;
 	overflow: auto;
 	h2, p {
@@ -1048,8 +1243,123 @@ FOOTER STYLES
 
 .footer {
 	clear: both;
-	background-color: $black;
-	color: $light-gray;
+	background-color: #222;
+	color: #fff;
+	.social {
+		position: absolute;
+		right: 0;
+		top: -38px;
+		a {
+			display: inline-block;
+			padding: 4px 10px;
+			&:first-of-type {
+				background: #444;
+				color: #444;
+			}
+			&:nth-of-type(2) {
+				background: #333;
+				color: #333;
+			}
+			&:nth-of-type(3) {
+				background: #222;
+				color: #222;
+			}
+			&:hover {
+				opacity: 0.8;
+			}
+			i {
+				background: $green;
+				border-radius: 50px;
+				padding: 6px;
+				font-size: 16px;
+				&.fa-facebook {
+					padding: 6px 10px;
+				}
+			}
+		}
+	}
+	.wrap {
+		max-width: 1200px;
+		width: 100%;
+		position: relative;
+		.widgettitle {
+			margin: 0px 0px 10px 0px;
+			border: 0px;
+			font-size: 16px;
+			text-transform: uppercase;
+			font-weight: 600;
+		}
+		.sep {
+			display: inline-block;
+			margin: 0px 10px;
+		}
+		#text-2 {
+			width: 25%;
+			margin-right: 60px;
+			float: left;
+			color: #fff;
+			font-size: 12px;
+			.logo {
+				border-bottom: 2px solid $green;
+				padding-bottom: 8px;
+				margin-bottom: 8px;
+				width: 260px;
+			}
+			img {
+				max-width: 260px;
+			}
+			a {
+				color: #fff;
+				font-size: 12px;
+			}
+			span {
+				display: inline-block;
+				margin-right: 20px;
+			}
+			.cities {
+				text-transform: uppercase;
+			}
+		}
+		#nav_menu-5 {
+			margin: 0px;
+			background: #444;
+			padding: 2.2em 1.5em;
+			height: 400px;
+		}
+		.widget_nav_menu {
+			width: 16%;
+			margin-right: 1%;
+			float: right;
+			
+			a {
+				color: #fff;
+				text-transform: uppercase;
+				font-weight: 300;
+				font-size: 12px;
+			}
+			ul {
+				margin: 0;
+				line-height: 115%;
+				font-size: 100%;
+				li {
+					margin: 0;
+				}
+				ul {
+					margin-bottom: 10px;
+					padding-left: 0px;
+				}
+			}
+		}
+	}
+	.copyright {
+		clear: both;
+		background: $black;
+		color: #eee;
+		font-size: 14px;
+		text-align: center;
+		text-transform: uppercase;
+		padding: 15px;
+	}
 }
 
 	/*
