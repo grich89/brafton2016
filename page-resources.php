@@ -1,7 +1,18 @@
 <?php get_header(); ?>
 
 <div class="resources wrap">
-<h1>Blog</h1>
+<h1>Resources</h1>
+
+<div class="sort">
+	<ul>
+		<li>Sort By</li>
+		<li><a href="#">All</a></li>
+		<li><a href="#">eBooks</a></li>
+		<li><a href="#">Infographics</a></li>
+		<li><a href="#">Whitepapers</a></li>
+		<li><a href="#">Video Tutorials</a></li>
+	</ul>
+</div>
 
 	<div class="d-all t-all m-all">
 
@@ -33,15 +44,13 @@
 
 					<?php endwhile; ?>
 
-					<div class="pagination">
-						<?php bones_page_navi(); ?>
-					</div>
+	</div>
+
+					<?php bones_page_navi(); ?>
 
 				<?php else : ?>
 					<!-- show 404 error here -->
 				<?php endif; ?>
-
-	</div>
 </div>
 
 <?php get_footer(); ?>

@@ -1371,6 +1371,90 @@ REUSABLE PAGE STYLES
   .make p {
     color: #fff; }
 
+.clients.d-all, .clients.m-all, .clients.t-all {
+  padding: 0px 0px 60px 0px;
+  overflow: auto; }
+  .clients.d-all .d-1of3, .clients.m-all .d-1of3, .clients.t-all .d-1of3 {
+    padding: 20px;
+    text-align: center; }
+    .clients.d-all .d-1of3 .caseimg, .clients.m-all .d-1of3 .caseimg, .clients.t-all .d-1of3 .caseimg {
+      width: 100%;
+      height: 150px;
+      background-size: cover;
+      background-position: center center;
+      padding-bottom: 10px; }
+    .clients.d-all .d-1of3 h3, .clients.m-all .d-1of3 h3, .clients.t-all .d-1of3 h3 {
+      font-size: 0.9em;
+      font-weight: 600;
+      border-top: 2px solid #ddd;
+      padding-top: 20px;
+      font-style: normal; }
+    .clients.d-all .d-1of3 .text, .clients.m-all .d-1of3 .text, .clients.t-all .d-1of3 .text {
+      margin-bottom: 20px;
+      font-style: italic; }
+
+.resources h1 {
+  padding-top: 60px;
+  padding-bottom: 20px;
+  text-align: center;
+  font-size: 2em;
+  font-weight: 600; }
+
+.resources .d-all, .resources .m-all, .resources .t-all {
+  padding: 0px 0px 60px 0px;
+  overflow: auto; }
+  .resources .d-all .d-1of3, .resources .m-all .d-1of3, .resources .t-all .d-1of3 {
+    padding: 0px 20px;
+    text-align: center; }
+    .resources .d-all .d-1of3 .thumb, .resources .m-all .d-1of3 .thumb, .resources .t-all .d-1of3 .thumb {
+      width: 100%;
+      height: 150px;
+      background-size: cover;
+      background-position: center center;
+      padding-bottom: 10px; }
+    .resources .d-all .d-1of3 h3, .resources .m-all .d-1of3 h3, .resources .t-all .d-1of3 h3 {
+      font-size: 1em;
+      font-weight: 600;
+      font-style: normal;
+      line-height: 180%;
+      margin: 20px 0px;
+      padding: 0; }
+    .resources .d-all .d-1of3 .text, .resources .m-all .d-1of3 .text, .resources .t-all .d-1of3 .text {
+      margin-bottom: 20px; }
+      .resources .d-all .d-1of3 .text p, .resources .m-all .d-1of3 .text p, .resources .t-all .d-1of3 .text p {
+        font-size: 1em;
+        line-height: 160%; }
+
+.sort ul {
+  border-top: 3px solid #ddd;
+  padding-top: 10px;
+  padding-bottom: 40px;
+  font-size: 16px; }
+  .sort ul li {
+    display: inline-block;
+    margin-right: 40px; }
+    .sort ul li a {
+      font-size: 16px; }
+
+.locations {
+  text-align: center;
+  padding: 60px 0px; }
+  .locations .d-all, .locations .m-all, .locations .t-all {
+    padding: 60px 0px; }
+  .locations .contact-info {
+    max-width: 500px;
+    float: none;
+    margin: 0px auto 80px auto;
+    text-align: left;
+    overflow: auto;
+    padding: 0px; }
+    .locations .contact-info .d-all {
+      padding: 10px 0px; }
+    .locations .contact-info a {
+      font-size: 16px;
+      font-weight: 400;
+      color: #333; }
+
 /********************
 WORDPRESS BODY CLASSES
 style a page via class
@@ -1476,6 +1560,9 @@ style a page via class
             margin: 0px;
             font-size: 1.7em; }
 
+.page-id-1000 #intro {
+  padding: 30px 0 60px 0; }
+
 .page-id-1000 .qualities {
   border-bottom: 3px solid #ddd;
   border-top: 3px solid #ddd;
@@ -1501,25 +1588,6 @@ style a page via class
   .page-id-1000 .aspirations p strong {
     font-weight: 600; }
 
-.page-id-1000 .locations {
-  text-align: center;
-  padding: 60px 0px; }
-  .page-id-1000 .locations .d-all, .page-id-1000 .locations .m-all, .page-id-1000 .locations .t-all {
-    padding: 60px 0px; }
-  .page-id-1000 .locations .contact-info {
-    max-width: 500px;
-    float: none;
-    margin: 0px auto 80px auto;
-    text-align: left;
-    overflow: auto;
-    padding: 0px; }
-    .page-id-1000 .locations .contact-info .d-all {
-      padding: 0px; }
-    .page-id-1000 .locations .contact-info a {
-      font-size: 18px;
-      font-weight: 400;
-      color: #333; }
-
 .page-id-1000 .make .d-1of2 {
   padding-right: 40px;
   border-right: 2px solid #fff; }
@@ -1529,6 +1597,30 @@ style a page via class
     border-right: 0px; }
 
 /* About Us */
+.page-id-1002 h1 {
+  padding-top: 60px;
+  text-align: center;
+  font-size: 2em;
+  font-weight: 600; }
+
+/* Case Studies */
+.page-id-1008 h1 {
+  font-size: 1.5em;
+  margin: 0;
+  padding: 0 30px; }
+
+.page-id-1008 .instructions {
+  display: block;
+  font-style: italic;
+  color: #666;
+  padding: 0 30px 30px 30px; }
+
+.page-id-1008 #demo {
+  background: #fff;
+  color: #333;
+  padding-bottom: 0; }
+
+/* Contact Us */
 /*********************
 LAYOUT & GRID STYLES
 *********************/
@@ -1829,7 +1921,9 @@ PAGE NAVI STYLES
 ******************************************************************/
 .pagination,
 .wp-prev-next {
-  margin: 1.5em 0; }
+  margin: 1.5em 0;
+  border-top: 3px solid #ddd;
+  clear: both; }
 
 .pagination {
   text-align: center; }

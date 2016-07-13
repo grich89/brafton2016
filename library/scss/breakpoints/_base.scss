@@ -136,6 +136,115 @@ REUSABLE PAGE STYLES
 	}
 }
 
+.clients {
+	&.d-all, &.m-all, &.t-all {
+		padding: 0px 0px 60px 0px;
+		overflow: auto;
+		.d-1of3 {
+			padding: 20px;
+			text-align: center;
+			.caseimg {
+				width: 100%;
+				height: 150px;
+				background-size: cover;
+				background-position: center center;
+				padding-bottom: 10px;
+			}
+			h3 {
+				font-size: 0.9em;
+				font-weight: 600;
+				border-top: 2px solid $med-gray;
+				padding-top: 20px;
+				font-style: normal;
+			}
+			.text {
+				margin-bottom: 20px;
+				font-style: italic;
+			}
+		}
+	}
+}
+
+.resources {
+	h1 {
+		padding-top: 60px;
+		padding-bottom: 20px;
+		text-align: center;
+		font-size: 2em;
+		font-weight: 600;
+	}
+	.d-all, .m-all, .t-all {
+		padding: 0px 0px 60px 0px;
+		overflow: auto;
+		.d-1of3 {
+			padding: 0px 20px;
+			text-align: center;
+			.thumb {
+				width: 100%;
+				height: 150px;
+				background-size: cover;
+				background-position: center center;
+				padding-bottom: 10px;
+			}
+			h3 {
+				font-size: 1em;
+				font-weight: 600;
+				font-style: normal;
+				line-height: 180%;
+				margin: 20px 0px;
+				padding: 0;
+			}
+			.text {
+				margin-bottom: 20px;
+				p {
+					font-size: 1em;
+					line-height: 160%;
+				}
+			}
+		}
+	}
+}
+
+.sort {
+	ul {
+		border-top: 3px solid $med-gray;
+		padding-top: 10px;
+		padding-bottom: 40px;
+		font-size: 16px;
+		li {
+			display: inline-block;
+			margin-right: 40px;
+			a {
+				font-size: 16px;
+			}
+		}
+	}
+}
+
+.locations {
+		text-align: center;
+		padding: 60px 0px;
+		.d-all, .m-all, .t-all {
+			padding: 60px 0px;
+		}
+		.contact-info {
+			max-width: 500px;
+			float: none;
+			margin: 0px auto 80px auto;
+			text-align: left;
+			overflow: auto;
+			padding: 0px;
+			.d-all {
+				padding: 10px 0px;
+			}
+			a {
+				font-size: 16px;
+				font-weight: 400;
+				color: $off-black;
+			}
+		}
+	}
+
 /********************
 WORDPRESS BODY CLASSES
 style a page via class
@@ -266,6 +375,9 @@ style a page via class
 			}
 		}
 	}
+	#intro {
+		padding: 30px 0 60px 0;
+	}
 	.qualities {
 		border-bottom: 3px solid $med-gray;
 		border-top: 3px solid $med-gray;
@@ -297,29 +409,6 @@ style a page via class
 			}
 		}
 	}
-	.locations {
-		text-align: center;
-		padding: 60px 0px;
-		.d-all, .m-all, .t-all {
-			padding: 60px 0px;
-		}
-		.contact-info {
-			max-width: 500px;
-			float: none;
-			margin: 0px auto 80px auto;
-			text-align: left;
-			overflow: auto;
-			padding: 0px;
-			.d-all {
-				padding: 0px;
-			}
-			a {
-				font-size: 18px;
-				font-weight: 400;
-				color: #333;
-			}
-		}
-	}
 	.make {
 		.d-1of2 {
 			padding-right: 40px;
@@ -332,6 +421,32 @@ style a page via class
 		}
 	}
 } /* About Us */
+.page-id-1002 {
+	h1 {
+		padding-top: 60px;
+		text-align: center;
+		font-size: 2em;
+		font-weight: 600;
+	}
+} /* Case Studies */
+.page-id-1008 {
+	h1 {
+		font-size: 1.5em;
+		margin: 0;
+		padding: 0 30px;
+	}
+	.instructions {
+		display: block;
+		font-style: italic;
+		color: #666;
+		padding: 0 30px 30px 30px;
+}
+	#demo {
+		background: #fff;
+		color: $off-black;
+		padding-bottom: 0;
+	}
+}/* Contact Us */
 /*********************
 LAYOUT & GRID STYLES
 *********************/
@@ -827,6 +942,8 @@ PAGE NAVI STYLES
 .pagination,
 .wp-prev-next {
 	margin: 1.5em 0;
+	border-top: 3px solid $med-gray;
+	clear: both;
 }
 	.pagination{
     text-align: center;
@@ -1257,8 +1374,8 @@ FOOTER STYLES
 				color: #444;
 			}
 			&:nth-of-type(2) {
-				background: #333;
-				color: #333;
+				background: $off-black;
+				color: $off-black;
 			}
 			&:nth-of-type(3) {
 				background: #222;
