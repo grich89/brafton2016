@@ -68,10 +68,12 @@
 </div>
 
 <div id="demo">
-	<div class="wrap">
-		<h2>Request a demo</h2>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris posuere facilisis nibh efficitur pulvinar.</p>
-		<?php get_template_part('marketoforms/contact_marketo_form'); ?>
+	<div class="overlay">
+		<div class="wrap">
+			<h2>Request a demo</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris posuere facilisis nibh efficitur pulvinar.</p>
+			<?php get_template_part('marketoforms/contact_marketo_form'); ?>
+		</div>
 	</div>
 </div>
 

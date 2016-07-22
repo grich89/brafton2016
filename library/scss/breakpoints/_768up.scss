@@ -63,7 +63,13 @@ NAVIGATION STYLES
 		}
 
 		&:first-child {}
-		&:last-child {}
+		&:last-child {
+			ul.sub-menu {
+				a {
+					font-weight: normal;
+				}
+			}
+		}
 
 		/*
 		plan your menus and drop-downs wisely.
@@ -71,7 +77,6 @@ NAVIGATION STYLES
 		ul.sub-menu,
 		ul.children {
 			margin-top: 0;
-			border: 1px solid #ccc;
 			border-top: 0;
 			position: absolute;
 			visibility: hidden;
@@ -79,12 +84,15 @@ NAVIGATION STYLES
 
 			li {
 
+				line-height: 120%;
+
 				a {
 					padding-left: 10px;
 					border-right: 0;
 					display: block;
-					width: 180px;
-					border-bottom: 1px solid #ccc;
+					padding: 0.25em 1.25em;
+					width: 200px;
+					font-size: .7em;
 
 					&:hover,
 					&:focus {}

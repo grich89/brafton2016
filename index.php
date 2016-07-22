@@ -33,9 +33,7 @@
 
 					<?php endwhile; ?>
 
-					<div class="pagination">
-						<?php bones_page_navi(); ?>
-					</div>
+					<?php bones_page_navi(); ?>
 
 				<?php else : ?>
 					<!-- show 404 error here -->

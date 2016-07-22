@@ -119,7 +119,7 @@ REUSABLE PAGE STYLES
 
 .make {
 	text-align: center;
-	background: url('/wordpress/wp-content/themes/brafton2016/library/images/placeholder_image_fullWidth.jpg');
+	background: url('/wp-content/themes/brafton2016/library/images/home-cta-requestademo.jpg');
 	background-size: cover;
 	background-position: center center;
 	.overlay {
@@ -183,7 +183,7 @@ REUSABLE PAGE STYLES
 				width: 100%;
 				height: 150px;
 				background-size: cover;
-				background-position: center center;
+				background-position: top center;
 				padding-bottom: 10px;
 			}
 			h3 {
@@ -200,6 +200,9 @@ REUSABLE PAGE STYLES
 					font-size: 1em;
 					line-height: 160%;
 				}
+			}
+			&:nth-of-type(4), &:nth-of-type(7) {
+				clear: both;
 			}
 		}
 	}
@@ -429,6 +432,35 @@ style a page via class
 		font-weight: 600;
 	}
 } /* Case Studies */
+.single-case_studies {
+	.header {
+		.expand {
+			.inner {
+				.text {
+					h1 {
+						color: #fff;
+						text-align: center;
+						font-weight: 600;
+						font-size: 36px;
+					}
+					p {
+						margin: 0 auto;
+						text-align: center;
+						width: 75%;
+						.morelink {
+							display: none;
+						}
+					}
+				}
+			}
+		}
+	}
+	#main {
+		article {
+			border: 0px;
+		}
+	}	
+} /* Single Case Study */
 .page-id-1008 {
 	h1 {
 		font-size: 1.5em;
@@ -440,7 +472,7 @@ style a page via class
 		font-style: italic;
 		color: #666;
 		padding: 0 30px 30px 30px;
-}
+	}
 	#demo {
 		background: #fff;
 		color: $off-black;
@@ -452,6 +484,7 @@ LAYOUT & GRID STYLES
 *********************/
 
 .wrap {
+	transition: .4s all;
 	width: 96%;
 	margin: 0 auto;
 }
@@ -579,6 +612,37 @@ HEADER STYLES
 			}
 		}
 	}
+	/* Shrink nav while scrolling */
+	.fixed {
+		position: fixed;
+		width: 100%;
+		left: 0;
+		z-index: 9999;
+	}
+	#spacer {
+		content: ' ';
+		height: 75px;
+	}
+	.shrink {
+		box-shadow: 0px 0px 15px rgba(0,0,0,0.8);
+		background: rgba(33,33,33,0.9);
+		.wrap {
+			transition: all .4s;
+			max-width: 1100px;
+		}
+		#logo {
+			margin: 0.5em 0;
+			height: 50px;
+			width: 230px;
+		}
+		.nav {
+			li {
+				a {
+					padding: 0.42em 1.15em;
+				}
+			}
+		}
+	}
 }
 
 	#logo {
@@ -588,6 +652,7 @@ HEADER STYLES
 		width: 270px;
     	height: 65px;
 		float: left;
+		transition: all .4s;
 
 		span {
 			display: none;
@@ -625,6 +690,7 @@ and more scalable.
 			text-transform: uppercase;
 			font-size: 0.8em;
 			font-weight: 300;
+			transition: all .4s;
 
 			/*
 			remember this is for mobile ONLY, so there's no need
@@ -659,7 +725,7 @@ and more scalable.
 		*/
 		ul.sub-menu,
 		ul.children {
-
+			border: 0px;
 			li {
 
 				a {
@@ -674,7 +740,13 @@ and more scalable.
 
 				&:first-child {}
 
-				&:last-child {}
+				&:last-child {
+					background: transparent;
+					margin-left: 0;
+					a {
+						font-weight: normal;
+					}
+				}
 
 			}
 
@@ -765,26 +837,29 @@ POSTS & CONTENT STYLES
 				margin: 0 0 1.5em;
 			}
 
-
-			ul, ol, table, dl {}
-
-			ul, ol {
-
-				li {}
-
-			}
-
 			ul {
+				list-style: none;
+				padding-left: 3em;
+				list-style-image: url(../images/Bullet1.png);
 
-				li {}
+				ul {
+					padding-left: 1.75em;
+					list-style-image: url(../images/Bullet2.png);
 
+					ul {
+						padding-left: 1.75em;
+						list-style-image: url(../images/Bullet1.png);
+					}
+				}
 			}
 
-			ol {
-
-				li {}
-
-			}
+	 		ol {
+	 			list-style-type: decimal;
+	 			padding: 0 0 0 30px;
+	 			li {
+	 				padding-left: 5px;
+	 			}
+	 		}
 
 			table {
 				width: 100%;
@@ -1311,9 +1386,16 @@ FORMS STYLES
 
 #demo {
 	background: $black;
-	padding: 20px 0px 70px 0px;
+	background-image: url('/wp-content/themes/brafton2016/library/images/home-cta-requestademo.jpg');
+	background-size: cover;
+	background-position: center center;
 	color: #fff;
 	overflow: auto;
+	.overlay {
+		background: rgba(0,0,0,0.85);
+		padding: 20px 0px 70px 0px;
+		overflow: auto;
+	}
 	h2, p {
 		color: #fff;
 		text-align: center;
@@ -1437,7 +1519,7 @@ FOOTER STYLES
 				text-transform: uppercase;
 			}
 		}
-		#nav_menu-5 {
+		#nav_menu-2 {
 			margin: 0px;
 			background: #444;
 			padding: 2.2em 1.5em;

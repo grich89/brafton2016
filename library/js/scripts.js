@@ -116,5 +116,13 @@ jQuery(document).ready(function($) {
   */
   loadGravatars();
 
+  $(window).scroll(function() {
+    if ($(document).scrollTop() > 50) {
+      $('.fixed').addClass('shrink');
+    } else {
+      $('.fixed').removeClass('shrink');
+    }
+  });
+
 
 }); /* end of as page load scripts */
