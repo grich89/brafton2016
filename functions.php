@@ -8,6 +8,9 @@ just edit things like thumbnail sizes, header images,
 sidebars, comments, etc.
 */
 
+//LOAD BRAFTON CORE FUNCTIONS
+require_once( 'library/brafton.php' );
+
 // LOAD BONES CORE (if you remove this, the theme will break)
 require_once( 'library/bones.php' );
 
