@@ -96,48 +96,81 @@ nav {
 						padding: 0.25em 1.25em;
 						width: 200px;
 						font-size: .7em;
-
-						&:hover,
-						&:focus {}
-
-						&:link {}
+						&:hover, &:focus {
+							color: $white;
+							text-decoration: underline;
+						}
 					}
+				}
+			}
 
-					&:first-child {}
+			&:last-child {
+				ul.sub-menu {
+					a {
+						font-weight: normal;
+					}
+				}
+			}
 
-					&:last-child {
+			/*
+			plan your menus and drop-downs wisely.
+			*/
+			ul.sub-menu,
+			ul.children {
+				margin-top: 0;
+				border-top: 0;
+				position: absolute;
+				visibility: hidden;
+				z-index: 8999;
 
-						a {
-							border-bottom: 0;
+				li {
+
+					line-height: 120%;
+
+					a {
+						padding-left: 10px;
+						border-right: 0;
+						display: block;
+						padding: 0.25em 1.25em;
+						width: 200px;
+						font-size: .7em;
+							&:link {}
+							&:first-child {}
+							&:last-child {
+								a {
+									border-bottom: 0;
+								}
+							}
+						}
+
+						/*
+						if you need to go deeper, go nuts
+						just remember deeper menus suck
+						for usability. k, bai.
+						*/
+						ul {
+							top:0;
+							left:100%;
 						}
 					}
 
-					/*
-					if you need to go deeper, go nuts
-					just remember deeper menus suck
-					for usability. k, bai.
-					*/
-					ul {
-						top:0;
-						left:100%;
+					/* highlight sub-menu current page */
+					li.current-menu-item,
+					li.current_page_item,
+					li.current_page_ancestor {
+						a {
+
+						}
 					}
 				}
-
-				/* highlight sub-menu current page */
-				li.current-menu-item,
-				li.current_page_item,
-				li.current_page_ancestor {
-					a {}
+				
+				/* showing sub-menus */
+				&:hover > ul {
+					top: auto;
+					visibility:visible;
 				}
-			}
 
-			/* showing sub-menus */
-			&:hover > ul {
-				top: auto;
-				visibility:visible;
-			}
-
-		} /* end .menu ul li */
+			} /* end .menu ul li */
 
 		/* highlight current page */
 		li.current-menu-item,
