@@ -13,13 +13,13 @@
 			<a href="#">Learn more</a>
 		</div>
 		<div class="d-1of2 t-1of2 m-1of2">
-			<img src="<?php echo get_template_directory_uri(); ?>/library/images/placeholder_image_fullWidth.jpg" />
+			<img src="<?php echo get_template_directory_uri(); ?>/library/images/template_placeholder_400.jpg" />
 		</div>
 	</div>
 
 	<div class="feature wrap">
 		<div class="d-1of2 t-1of2 m-1of2">
-			<img src="<?php echo get_template_directory_uri(); ?>/library/images/placeholder_image_fullWidth.jpg" />
+			<img src="<?php echo get_template_directory_uri(); ?>/library/images/template_placeholder_400.jpg" />
 		</div>
 		<div class="d-1of2 t-1of2 m-1of2">
 			<h2>Strategies that get results</h2>
@@ -35,7 +35,7 @@
 			<a href="#">Learn more</a>
 		</div>
 		<div class="d-1of2 t-1of2 m-1of2">
-			<img src="<?php echo get_template_directory_uri(); ?>/library/images/placeholder_image_fullWidth.jpg" />
+			<img src="<?php echo get_template_directory_uri(); ?>/library/images/template_placeholder_400.jpg" />
 		</div>
 	</div>
 </div>

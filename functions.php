@@ -256,4 +256,27 @@ function bones_fonts() {
 
 add_action('wp_enqueue_scripts', 'bones_fonts');
 
+// Add div to enable full width submenu
+
+add_action( 'wp_loaded', 'wpse_78027_register_menu' );
+function wpse_78027_register_menu()
+{
+    register_nav_menu(
+        'Full width',
+        __( 'A full width menu!', 'brafton2016' )
+    );
+}
+
+class WPSE_78121_Sublevel_Walker extends Walker_Nav_Menu
+{
+    function start_lvl( &$output, $depth = 0, $args = array() ) {
+        $indent = str_repeat("\t", $depth);
+        $output .= "\n$indent<div class='sub-menu-wrap'><ul class='sub-menu'>\n";
+    }
+    function end_lvl( &$output, $depth = 0, $args = array() ) {
+        $indent = str_repeat("\t", $depth);
+        $output .= "$indent</ul></div>\n";
+    }
+}
+
 /* DON'T DELETE THIS CLOSING TAG */ ?>

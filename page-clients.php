@@ -1,7 +1,6 @@
 <?php get_header(); ?>
 
 <div class="wrap">
-<h1>Case Studies</h1>
 
 	<div class="clients d-all t-all m-all">
 	<?php

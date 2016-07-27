@@ -76,7 +76,14 @@
 			        			               'link_after' => '',                             // after each link
 			        			               'depth' => 0,                                   // limit the depth of the nav
 			    					         'fallback_cb' => ''                             // fallback function (if there is one)
-									)); ?>
+									)); 
+										//wp_nav_menu(
+										    //array (
+										        //'theme_location' => 'Full width',
+										        //'walker'         => new WPSE_78121_Sublevel_Walker
+										    //)
+										//);
+									?>
 
 								</nav>
 
@@ -100,9 +107,7 @@
 								</div>
 							</div>
 
-						<?php } ?>
-
-						<?php if (is_page('About')) { ?>
+						<?php } else if (is_page('About')) { ?>
 
 							<div class="video">
 								<div class="inner">
@@ -115,11 +120,26 @@
 								</div>
 							</div>
 
-						<?php } ?>
-
-						<?php if (is_singular('case_studies') ) { ?>
+						<?php } else if (is_page() ) { ?>
 
 							<div class="expand">
+								<div class="inner">
+									<div class="text">
+										<h1><?php the_title(); ?></h1>
+										<?php $desc = get_field('page_description'); ?>
+										<?php if( $desc ) {
+											echo '<p>';
+											echo $desc;
+											echo '</p>';
+										}
+										?>
+									</div>
+								</div>
+							</div>
+
+						<?php } else if (is_singular('case_studies') ) { ?>
+
+							<div class="case-study expand">
 								<div class="inner">
 									<div class="text">
 										<h1><?php the_title(); ?></h1>

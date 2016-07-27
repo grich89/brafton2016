@@ -7,7 +7,7 @@
 
 	<div id="demo" class="d-all t-all m-all">
 		<div class="wrap">
-			<h1>Contact Us</h1>
+			<h2>Contact Us</h2>
 			<span class="instructions">Please fill out the form below</span>
 			<?php get_template_part('marketoforms/contact_marketo_form'); ?>
 		</div>

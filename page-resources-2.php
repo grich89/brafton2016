@@ -1,7 +1,6 @@
 <?php get_header(); ?>
 
 <div class="resources wrap">
-<h1>Resources</h1>
 
 <div class="sort">
 	<ul>
