@@ -33,6 +33,10 @@ body {
 REUSABLE PAGE SECTIONS
 *********************/
 
+.first {
+	padding-top: 80px;
+}
+
 #intro, .section {
 	padding: 40px 0px 100px 0px;
 	h2 {
@@ -50,6 +54,12 @@ REUSABLE PAGE SECTIONS
 
 .section {
 	padding: 0px 0px 100px 0px;
+	.wrap {
+		&.divider {
+			border-bottom: 3px solid #ddd;
+			padding-bottom: 100px;
+		}
+	}
 }
 
 .features {
@@ -184,6 +194,16 @@ REUSABLE PAGE SECTIONS
 				margin-bottom: 20px;
 				font-style: italic;
 			}
+		}
+	}
+}
+
+.clients {
+	&.lp {
+		padding: 0px 0px 100px 0px;
+		h2 {
+			margin-top: 0;
+			text-align: center;
 		}
 	}
 }
@@ -348,6 +368,133 @@ REUSABLE PAGE SECTIONS
 	}
 }
 
+.service-list {
+	font-weight: 600;
+	.wrap {
+		border-bottom: 3px solid #ddd;
+	    border-top: 3px solid #ddd;
+	    overflow: auto;
+	    padding: 50px 0px 70px 0px;
+	    p {
+	    	color: $off-black;
+	    }
+	}
+}
+
+.graphic-content-block {
+	background: $black;
+	background-image: url('/wp-content/themes/brafton2016/library/images/home-cta-requestademo.jpg');
+	background-size: cover;
+	background-position: center center;
+	overflow: auto;
+	margin-bottom: 100px;
+	.overlay {
+		background: rgba(0, 0, 0, 0.7);
+		padding: 60px 0px;
+	    overflow: auto;
+		h2 {
+			color: #fff;
+		}
+		p {
+			color: #fff;
+			width: 50%;
+		}
+		.green-btn {
+			margin-top: 1em;
+			margin-left: 2em;
+		}
+	}
+}
+
+.industries {
+	overflow: auto;
+	color: #999;
+	.industry {
+		width: 25%;
+		float: left;
+		text-align: center;
+		text-transform: uppercase;
+		padding: 40px 0px;
+		i {
+			font-size: 72px;
+			display: block;
+			margin-bottom: 15px;
+		}
+	}
+}
+
+.videos {
+	overflow: auto;
+	.d-1of2, .t-1of2, .m-1of2 {
+		overflow: auto;
+		text-align: center;
+		padding: 40px;
+	}
+}
+
+.leadership {
+	padding: 80px 0px;
+	overflow: auto;
+ 	.d-1of4, .t-1of4, .m-1of4 {
+ 		padding: 20px;
+ 		.image {
+	 		height: 400px;
+	 		width: 100%;
+	 		background-size: cover;
+	 		background-position: top center;
+	 		display: table;
+	 		.text {
+	 			display: table-cell;
+	 			vertical-align: bottom;
+	 			transition: .4s all;
+	 			&:hover {
+	 				background: rgba(140,192,64, 0.4);
+	 				.inner {
+	 					background: $off-black;
+	 					color: #fff;
+	 					.right {
+	 						a {
+	 							color: $off-black;
+	 							background: #fff;
+	 						}
+	 					}
+	 				}
+	 			}
+	 			.inner {
+		 			background: $med-gray;
+		 			padding: 15px;
+		 			overflow: auto;
+		 			transition: .4s all;
+		 			.left {
+		 				float: left;
+		 				width: 85%;
+			 			span.name {
+			 				display: block;
+			 				font-weight: 600;
+			 			}
+			 			span.title {
+			 				display: block;
+			 			}
+			 		}
+			 		.right {
+			 			width: 15%;
+			 			float: right;
+			 			a {
+			 				color: $med-gray;
+			 				background: $off-black;
+			 				padding: 4px 8px;
+			 				border-radius: 50px;
+			 				&:hover {
+			 					background: $green; 
+			 				}
+			 			}
+			 		}
+	 			}
+	 		}
+	 	}
+ 	}
+}
+
 /********************
 WORDPRESS BODY CLASSES
 style a page via class
@@ -472,7 +619,7 @@ style a page via class
 .logged-in {}                     /* if user is logged in */
 .paged {}                         /* paged items like search results or archives */
 	.paged-1 {}                     /* individual paged (i.e. body.paged-3) */
-.page-id-1000 {
+.page-id-1000, .page-id-1026 {
 	.header {
 		background: url('/wordpress/wp-content/themes/brafton2016/library/images/placeholder_image_fullWidth.jpg');
 		background-size: cover;
@@ -723,7 +870,6 @@ HEADER STYLES
 				}
 				p {
 					line-height: 180%;
-					font-size: 1.1em;
 					width: 500px;
 					color: #fff;
 				}
@@ -751,8 +897,7 @@ HEADER STYLES
 		background: rgba(33,33,33,0.9);
 		.wrap {
 			transition: all .4s;
-  			width: 1165px;
-			max-width: 1100px;
+  			max-width: 1165px;
 		}
 		#logo {
 			margin: 0.5em 0;
